@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+    <head>
+        <!-- Meta Tags-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!--My Own CSS loaded last to be able overwrite BS classes-->
+        <link rel="stylesheet" href="style.css" type="text/css" />
+
+        <title>PSBS</title>
+    </head>
+
+    <body>
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col-12">
+                    <form name="BookingForm" action="BookControllerServlet" method="GET">                       
+                        <input type="hidden" name="command" value="ADD" />
+                        <div class="form-group">
+                            <h1>Parking Space Booking System - PSBS</h1>
+                        </div>
+                        <div class="form-group">
+                            <label for="number">Parking place number: (from 1 to 35):</label>
+                            <input type="number" name="number" class="input_row" value="1" min="1" max="35" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="start">Booking
+                                <b>START</b> date (
+                                <u>Can not be later</u> than booking end date):</label>
+                            <input id="startDate" name="start" type="date" class="input_date" min="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="end">Booking
+                                <b>END</b> date:</label>
+                            <input id="endDate" name="end" type="date" class="input_date" min="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userName">Name and Surname (only latin letters allowed):</label>
+                            <input type="text" name="userName" class="input_row" size="40" pattern="[a-zA-Z][a-zA-Z ]{2,}" placeholder="Name Surname"
+                                   required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone (no whitespaces or special chars allowed):</label>
+                            <input type="tel" name="phone" class="input_row" size="30" pattern="[0-9]{1,}" placeholder="112233" required>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg popup">Book</button> <button type="button" class="btn btn-info btn-lg" id="apiPopup">API Info</button>
+                    </form>
+                    <br>
+                    <br>
+                    <footer>
+                        <h6>Site created by Łukasz Kobylański&copy;</h6>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <!-- JavaScript files loaded after the DOM is loaded so all event listeners can work properly-->
+        <script src="logic.js"></script>
+    </body>
+
+</html>

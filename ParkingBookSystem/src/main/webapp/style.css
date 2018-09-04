@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+body{
+    margin: 0 !important;
+    font-family: sans-serif;
+    background-image: url("https://images.techhive.com/images/article/2015/09/cars_parked_underground_garage-100616290-orig.jpg");
+}
+
+.container {
+    overflow: auto;
+    margin-top: 6%;
+    padding: 4%;
+    background-color: #99c2ff;
+    border-style: solid;
+    border-width: 5px;
+}
+
+#header {
+    border-width: 2px 4px 0px 2px;
+    border-color: darkslategray;
+    border-collapse: collapse;
+    border-style: solid;
+    color: whitesmoke;
+    text-align: center;
+    margin: auto;
+    width: 72%; 
+    background: #0775d3; 
+    margin-top: 0px; 
+    padding:15px 0px 15px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {   
+    margin: auto;
+    border-color: darkslategray;
+    border-collapse: collapse;
+    border-width: 2px 4px 4px 2px;
+    border-style: solid;
+    font-family: Tahoma,Verdana,Segoe,sans-serif;
+    width: 72%;
+}
+
+th {
+    text-align: center;
+    border-bottom: 1px solid gray;
+    background: none repeat scroll 0 0 #0775d3;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+tr {
+    border-top: 1px solid gray;
+    text-align: center;	
+}
+
+tr:nth-child(even) {background: #FFFFFF}
+tr:nth-child(odd) {background: #BBBBBB}	
